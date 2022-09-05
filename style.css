@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box ;
+}
+body{
+    background-color: black;
+    color: white ;
+}
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("img/newback1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 10px 20px;
+    /* margin : 10px 20px */
+    
+}
+.color{
+    background-color: red;
+    width: 50%;
+    border-radius: 12px;
+    padding: 7px;
+    
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+.color ul li a::after{
+    content:'';
+    width: 0%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.color ul li a:hover::after{
+    width:100% ;
+}
+.header-text{
+    margin-top: 20%;
+    margin-left: 50%;
+    font-size: 25px;
+  
+}
+.header-text h1{
+    margin-top: 20px;
+    font-size: 50px;
+}
+.header-text h1 span{
+    color: red;
+}
+.header-text h4{
+    margin-top: 10px ;
+}
+
+/* -----------------ABOUT-------------- */
+#about{
+    margin-top: 50px;
+    padding-left: 100px;
+}
+.container.con2{
+    background-color: red;
+    width: 100%;
+    border-radius: 10px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.col1{
+    flex-basis: 40%;
+    text-align: center;
+    color: aliceblue;
+
+}
+.col2{
+    flex-basis: 20%;
+
+}
+.col2 img{
+    border-radius: 6px;
+}
+
+/* -----------------MY WORK--------------- */
+#my-work{
+    margin-top: 60px;
+    padding-left: 100px;
+}
+.container.con1{
+    background-color: red;
+    width: 100%;
+    border-radius: 10px;
+
+}
+.sub-title{
+    text-align: center;
+    padding-right: 100px;
+    font-size: 50px;
+}
+/* .big{
+    display: grid;
+    grid-template-columns: repeat(autofit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    
+} */
+.big{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 50px;
+    margin-top: 40px;
+    
+}
+/* .row-w{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+} */
+.row-w img{
+    /* width: 50%; */
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.row-w:hover img{
+    transform: scale(1.1);
+}
+
+/* -----------------contact------------------- */
+.contact-left{
+    
+    flex-basis: 45%;
+    
+}
+.sub-title-1{
+    margin-top: 15px;
+    text-align: left;
+    font-size: 50px;
+    margin-bottom: 40px;
+
+}
+
+.contact-right{
+    flex-basis: 50%;
+}
+.contact-left p{
+    margin-top: 30px;
+    color: beige;
+    margin-left: 15px;
+}
+.contact-left p a{
+    text-decoration: none;
+    color: yellow;
+}
+/* .social-icons{ */
+    /* display: flex;
+    justify-content: space-around;
+    flex-wrap: initial;
+} */
+.social-icons a{
+    margin-right: 45px;
+}
+.contact-left img{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    display: inline;
+}
+.contact-left img:hover{
+    transform: scale(1.1);
+}
+.button {
+    margin-top: 10px;
+    
+    display: block;
+    width: 300px;
+    height: 35px;
+    background: red;
+    padding: 9px;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    
+}
+.contact-right form{
+    width: 100%;
+}
+.button.btn2{
+    width: 510px;
+    padding: 10px;
+}
+form input,form textarea{
+    width: 100%;
+    background-color: #262626;
+    color: white;
+    margin-top: 15px;
+    padding: 3px;
+    outline: none;
+    border: 0;
+    font-size: 20px;
+    border-radius: 6px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: red;
+    font-weight: 100;
+    margin-top: 50px;
+}
+
+
+
+/* ------------------------------css for small screen-------------------- */
+
+@media only screen and (max-width:600px){
+    #header{
+        background-image: url("img/newback.jpg");
+    }
+    .header-text{
+        
+        margin-top: 40%;
+        font-size: 20px;
+        display: inline-block;
+        
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    /* nav ul{
+        background: red;
+        position: fixed;
+        top:0;
+        right: 50px;
+        bottom: 100;
+        width: 100px;
+        height: 50vh;
+        padding-top: 10px;
+        border-radius: 6px;
+    }
+    
+    nav ul li{
+        display: block;
+        margin: 25px;
+    } */
+    .color{
+        display: none;
+    }
+    .sub-title{
+        font-size: 40px;
+        width: 70%;
+    }
+    .col1,.col2{
+        flex-basis: 100%;
+    }
+    .col1{
+        margin-bottom: 30px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .row-w img{
+        width: 200px;
+        margin-bottom: 10px;
+    }
+    /* .contact-right{
+        flex-basis: 50%;
+    } */
+    .contact-left{
+        flex-basis: 100%;
+    }
+    .contact-right form{
+        width: 200%;
+    }
+    .button.btn2{
+        width: 100%;
+    }
+    
+   
+    
+
+}
+    
