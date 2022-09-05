@@ -6,18 +6,18 @@ if(isset($_POST['submit'])) {
  $name = $_POST['name']; //getting customer name
  $email = $_POST['email']; //getting customer email
  
- $message3= $_POST['message3']
+ $message3= $_POST['message']
  $subject2 = "Confirmation: Message was submitted successfully "; // For customer confirmation
  
  //Email body I will receive
- $message = "Cleint Name: " . $name . "\n"
+ $message1 = "Cleint Name: " . $name . "\n"
  . 
- . "Client Message: " . "\n" . $_POST['message'];
+ . "Client Message: " . "\n" . $_POST['message1'];
  
  //Message for client confirmation
  $message2 = "Dear" . $name . "\n"
  . "Thank you for contacting us. We will get back to you shortly!" . "\n\n"
- . "You submitted the following message: " . "\n" . $_POST['message'] . "\n\n"
+ . "You submitted the following message: " . "\n" . $_POST['message1'] . "\n\n"
  . "Regards," . "\n" . "- HMA WebDesign";
  
  //Email headers
